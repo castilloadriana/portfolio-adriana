@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Adriana Castillo"
-  text: "a fun portfolio"
+  text: "Full Stack Developer Portfolio"
   tagline: "From Front to Back: My 6.104 Journey"
   actions:
     - theme: brand
