@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "TODO: Title"
-  text: "TODO: Subtitle"
-  tagline: "TODO: Tagline"
+  name: "Adriana Castillo"
+  text: "a fun portfolio"
+  tagline: "From Front to Back: My 6.104 Journey"
   actions:
     - theme: brand
       text: Template Repository
