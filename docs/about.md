@@ -7,4 +7,4 @@ layout: doc
 
 
 
-![colorful formal portrait](/Users/adriana/Documents/GitHub/portfolio-adriana/assets/images/AC.jpg){:width='300'}
+![colorful formal portrait](/Users/adrianacastillo/Documents/GitHub/portfolio-adriana/assets/images/AC.jpg){:width='300'}
