@@ -73,9 +73,9 @@ Target audience is elders who like to update their friends and family about what
 
 
 ## Storyboarding and sketching
-### Make a post
-![Make a post](assignments_images/sticky_drawing.png){:width='500'}
+### Add Sticky To Post
+![Sticky a post](assignments_images/sticky_drawing.png){:width='500'}
 
 ### Make a post
-![Add Sticky to Post](assignments_images/post_drawing.png){:width='500'}
+![Make Post](assignments_images/post_drawing.png){:width='500'}
 
