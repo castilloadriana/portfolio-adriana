@@ -7,6 +7,7 @@ layout: doc
 
 ## Pitch
 
+PocketMe is a social media platform designed for seniors who enjoy sharing personal reflections, poetry, and everyday updates in a journal or diary format with longer written pieces. The app fosters meaningful connections with close friends and family, offering a comforting space to capture memories, thoughts, and emotions without the overwhelming noise of traditional platforms.
 
 Users can create journals that allow them to post entries with text and images, which can be either public or private. Entries are tagged by topics like family, travel, food, or hobbies, making it easy to explore similar content. A highlight feature enables readers to comment directly on specific parts of other users' entries.
 
@@ -113,7 +114,7 @@ App PocketMe
 
 
 ## Wireframes
-[View the interactive Figma design](https://www.figma.com/file/RzQ9d8aC9z918WGThOduXc/PocketMe?node-id=0-1&embed-host=share)
+[View the interactive Figma design](https://www.figma.com/proto/RzQ9d8aC9z918WGThOduXc/PocketMe?node-id=4-125&node-type=canvas&t=7wOS0HasO0FKIfdm-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A125)
 
 
 ## Design Tradeoffs
