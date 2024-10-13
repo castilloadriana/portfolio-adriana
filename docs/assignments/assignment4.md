@@ -19,103 +19,30 @@ PocketMe’s unique "Places" feature lets users tag the location of their entrie
 
 
 ###  Abstract Data Model
-![Abstract Data Model](assignments_images/AbstractDataModels.png){:width='400'}
+![Abstract Data Model](assignments_images/A4DataModels.jpg){:width='400'}
 
-## Functional Design 
-### Concepts
-- concept Posting [User, Item]
-    - purpose: media entry 
-    - principle: Users can create media to share for other users to see publicly or they can keep privately just for them to access.
-    - state:
-        - body: entry -> Strings, Images
-	    - tags: multiple Strings
-	    - LocationPin: Entry -> one map location
-    - actions
-	    - AddPost(i: item, body: Content, tags: strings, LocationPin: location, out: entry)
-	    - deletePost (i: item, body: Content, tags: strings, LocationPin: location, out: entry)
-        - edit
-----------------------------
-- concept Highlighting [Item]
-    - purpose comment on media
-    - principle: Users can select a section of text from another user’s public content and can leave a comment on it 
 
-    - state:
-        - Comment: Item -> set String
-    - actions
-	    - createHighlight (i: item, Comment: set String, out: string)
-        - updateHighlight (i: item, oldH: string, newH: string)
-        - deleteHighlight (i: item)
-----------------------------
-- concept Stickying [Item]
-    - purpose add sticker reaction on items
-    - principle: Users can can leave a reaction on another user’s content publicly.
-    - state:
-        - Stickies: Item -> set Image
-    - actions
-	    - addSticky (i: item, st: sticky)	
-        - removeSticky(i: item, st: sticky)
+###  Design Reflection
+During the backend implementation, several unanticipated challenges emerged, requiring adjustments 
+to my original design. One issue involved users potentially skipping steps, like trying to create a 
+post without first setting up a journal. To handle this, I implemented error checks to ensure certain 
+actions were only allowed if prerequisite steps were completed, improving the user flow and preventing 
+confusion.
 
-----------------------------
-- concept Bookmarking [Item]
-    - purpose: save content 
-    - principle: Users can save other users’ public items 
-    - state:
-        - Save: Item -> set Bookmark
-    - actions
-	    - addBookmark (i: item)
-        - removeBookmark(i: item)
+A separate issue arose with the bookmark feature. I needed to ensure each user had a single bookmark 
+instance, using an array property to store all bookmarked posts. This required careful checks to prevent 
+multiple instances of a bookmark from being created, this was a concept slightly different from others 
+because it needed to be instantiated only once per user because this would act as creating the bookmark 
+folder where they would keep all posts bookmarked.
 
-----------------------------
-- concept Journaling [Item]
-    - purpose: collection of contents created
-    - principle: Users can categorize contents created by them into different collections could be according to topics
-        - Name: Item -> set String
-        - Contents: Array
-        - Privacy: set Boolean
-        - Author: ObjectId
-    - actions
-        - deleteJournal(item: ObjectId)
-        - updateJournalSettings(item: ObjectId, name: string, privacy: boolean)
-        - createJournal(author: ObjectId, name: string, privacy: boolean)
-        - getJournals()
-        - getByAuthor(author: ObjectId)
-----------------------------
-- concept Profile [User]
-    - purpose: collection of user’s contents
-    - principle: Users can see their own profiles or others profiles where items created by them are displayed, and they can pair their profile with a song
-        - Privacy: set Boolean
-        - song: set String
-    - actions
-	    - addSong(j: string)
-        - deleteSong(oldS: string, newS: string)
-        
-        
-----------------------------
-- concept Authenticating [Item]
-    - purpose: collection of user’s contents
-    - principle: after a user registers with a username and password pair, they can authenticate as that user by providing
-        the pair: register (n, p, u), authenticate (n, p, u') {u' = u}.
-    - state
-        - registered: set User 
-        - username, password: registered one String
-    - actions
-        - register (name, pass: String, out user: User)
-        - authenticate (name, pass: String, out user: User)
-        
-        
-----------------------------
-- concept Session-ing [User]
-    - purpose: enable authenticated actions for an extended period of time
-    - principle: after a session starts (and before it ends), the getUser action returns the user identied at the start: start (u, s); getUser (s, u') {u' = u} the pair: register (n, p, u), authenticate (n, p, u') {u' = u}.
-    - state
-        - active: set Session
-        - user: active one User
-    - actions
-        - start (user: User, out sess: Session)
-        - getUser (sess: Session, out user: User) 
-        - end (sess: Session)
-        
-        
-----------------------------
+Additionally, I initially considered giving users the option to set privacy for both journals and 
+individual posts. However, I realized that simplifying this to only the journal level made more sense, 
+as posts are inherently nested within journals. This decision reduced the complexity for users and 
+established a clearer hierarchy in the data structure.
 
-----------------------------
+Furthermore, I discovered gaps in my initial design, such as the need to include the author's information 
+within posts, which was overlooked. Throughout the process of bulding functions I noticed new synchronizations
+ that needed to be included like sessioning. I also realized that profile did not need to be a concept but it
+  is rather a UI idea, because there are no actions related to it.
+
+
