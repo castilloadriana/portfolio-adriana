@@ -13,8 +13,8 @@ layout: doc
 
 
 ## Visual Design Study
-![Color Study](assignments_images/frame1.png){:width='500'}
-![Font Study](assignments_images/frame2.png){:width='500'}
+![Color Study](assignments_images/Frame1.png){:width='500'}
+![Font Study](assignments_images/Frame2.png){:width='500'}
 
 
 ## Heuristic evaluation
