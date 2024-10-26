@@ -5,6 +5,18 @@ layout: doc
 
 # Assignment 5
 
+
+## Wireframes
+[FrontEnd Repo](https://github.com/castilloadriana/frontend-pocketMe)
+[Vercel Deployment](frontend-pocket-f5l3lnj8p-adrianas-projects-b4563a35.vercel.app)
+
+
+
+## Visual Design Study
+![Color Study](assignments_images/frame1.png){:width='500'}
+![Font Study](assignments_images/frame2.png){:width='500'}
+
+
 ## Heuristic evaluation
 ### Usability Criteria:
 Errors:
@@ -26,6 +38,3 @@ The app uses simple, straightforward language, familiar to users who are accusto
 
 Information Scent:
 The Explore page offers content suggestions through popular tags and a search option for people or topics. Users can follow tags to have relevant content appear in their feed. Additionally, trending public posts with high engagement could be displayed on the Explore page. Users can also discover new profiles by seeing others’ reactions in the comments or on posts they engage with.
-
-
-
